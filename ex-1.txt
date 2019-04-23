@@ -1,0 +1,11 @@
+Criar um banco de dados chamado livraria
+que possui a tabela livros,essa tabela devera conter
+os seguintes atributos:
+nome do livro,
+nome do autor,
+sexo do autor,
+numero de paginas,
+nome da editora,
+valor do livro,
+uf da editora,
+ano publicado;
