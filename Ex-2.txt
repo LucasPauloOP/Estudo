@@ -1,0 +1,22 @@
+considerando o q vc aprendeu sobre perfomace, resolva os exercicios abaixo
+
+traga os funcionarios que trabalham no departamento de filmes ou no departamento de roupas
+
+o getor de marketing pediu a lista dos funcionarios que trabalham no departamento lar ou no 
+departamento filmes. Ele necessita enviar um email para os colaboradores desses dois setores
+
+traga os funcionarios do sexo masculino ou os funcionarios que trabalham no jardim.
+
+banco empresa
+tabela Funcionarios
+
+precisara ter na tabela
+id funiconario integer;
+nome
+email
+sexo
+departamento
+admissao
+salario
+cargo
+id regiao
