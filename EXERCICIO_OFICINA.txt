@@ -1,0 +1,10 @@
+1) Crie um banco de dados chamado projeto e conecte-se ao banco
+
+2) Faça a seguinte modelagem.
+
+Sr. José quer modenizar sua oficina, e por enquanto, cadastrar os que entram
+para relazar serviços e os seus respectivos donos. Sr. José mencionou que cada
+cliente possui apenas um carro. Um carro possui uma marca Sr. José tambem quer 
+saber as cores dos carros para ter ideia de qual tinta comprar, e informar que um carro
+pode ter mais de uma cor.
+Sr. josé necessita armazenar os telefones dos clientes mas não quer que eles sejam obrigatórios.
