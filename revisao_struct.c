@@ -75,6 +75,7 @@ int main(){
 	//Uso do método de seleção de selection sort.
 	//Menos caro em processamento do que o bolha.
 	
+	//Usando índice.
 	for (i=0; i<max-1; i++){
 	        min = i;
 	        
@@ -90,6 +91,27 @@ int main(){
 		p1[i] = aux2;
 		
 	}
+	
+	//Usando uma variável da struct direto
+	
+/*	int pmenor;
+	
+	for (i=0; i<max-1; i++){
+		
+	        aux2 = p1[i];
+	        
+	    for (j=i+1; j<max; j++){
+	    	
+	       	 if (p1[j].idade < aux2.idade)
+	        	aux2 = p1[j];
+	        	pmenor=j;
+	    }
+	    
+		p1[pmenor]=p1[i];
+		p1[i] = menor;
+		
+	}*/
+	
 	
         for ( i=0; i<max; i++){
             printf("\n%s",p1[i].nome);
