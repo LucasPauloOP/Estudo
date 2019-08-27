@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define max 5
+#include<locale.h>
 
 /* Fazer um programa para armazenar os dados de 5 pessoas (nome e idade)
 em um vetor de registros, colocar os elementos do veotor em ordem crescente 
@@ -26,11 +27,16 @@ typedef struct{
 }pessoa;
 
 int main(){
+	
+	setlocale(LC_ALL,"portugues");
+	
 	pessoa p1[max];
 	int aux;
 	
 	for(aux=0;aux<5;aux++)
 	{
+		system("cls");
+		
 		printf("\nDigite o nome da pessoa: ");
 		fflush(stdin);
 		gets(p1[aux].nome);
@@ -58,20 +64,35 @@ int main(){
 		
 		printf("\nDigite o número de sua casa: ");
 		scanf("%d",&p1[aux].end.num);
+			
+		printf("\n-----------------------------------------");
+		getch();
 	}
 	
 	pessoa aux2;
-	int i,j;
-	for ( j=max-1; j>0; j--){
-        for ( i=0; i<j; i++){
-            if (p1[i].idade > p1[i+1].idade){                            
-                aux2 = p1[i];
-               	p1[i] = p1[j];
-                p1[j] = aux2;          
-            }
+	int i,j,min;
+		
+	//Uso do método de seleção de selection sort.
+	//Menos caro em processamento do que o bolha.
+	
+	for (i=0; i<max-1; i++){
+	        min = i;
+	        
+	    for (j=i+1; j<max; j++){
+	    	
+	       	 if (p1[j].idade < p1[min].idade)
+	        	min = j;
+	         
+	    }
+	    
+		aux2 = p1[min];
+	    p1[min] = p1[i];
+		p1[i] = aux2;
+		
+	}
+	
+        for ( i=0; i<max; i++){
+            printf("\n%s",p1[i].nome);
         }
-    }
-	
-
-	
+    
 }
